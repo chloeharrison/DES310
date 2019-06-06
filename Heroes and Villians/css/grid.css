@@ -1,0 +1,95 @@
+@supports (display: grid) {
+
+  .grid {
+    display: grid;
+    grid-gap: 1.5vw;
+    min-height: 100vh;
+    padding: 1.5vw;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 20vh 40vh repeat(5, minmax(20vh, 1fr));
+    grid-template-areas:
+     "big1   big1"
+      "hero1   hero2"
+      "hero3   hero4"
+     "big2   big2"
+         ;
+  }
+@media screen and (min-width: 250px) {
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(10, 25vh);
+      grid-template-areas:
+       "big1   big1   big1   big1   big1  big1"
+      "hero1   hero1  hero1  hero1  hero1 hero1  "
+      "hero1   hero1  hero1  hero1  hero1 hero1  "
+      "hero2   hero2  hero2  hero2  hero2 hero2 "
+      "hero2   hero2  hero2  hero2  hero2 hero2 "
+      "hero3   hero3  hero3  hero3  hero3 hero3 "
+       "hero3   hero3  hero3  hero3  hero3 hero3 "
+      "hero4   hero4 hero4  hero4 hero4 hero4  "
+         "hero4   hero4 hero4  hero4 hero4 hero4  "
+      "big2    big2   big2   big2   big2  big2"
+      ;
+    }
+  }
+  @media screen and (min-width: 450px) {
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(10, 25vh);
+      grid-template-areas:
+       "big1   big1   big1   big1   big1  big1"
+      "hero1   hero1  hero1  hero1  hero1 hero1  "
+      "hero1   hero1  hero1  hero1  hero1 hero1  "
+      "hero2   hero2  hero2  hero2  hero2 hero2 "
+      "hero2   hero2  hero2  hero2  hero2 hero2 "
+      "hero3   hero3  hero3  hero3  hero3 hero3 "
+       "hero3   hero3  hero3  hero3  hero3 hero3 "
+      "hero4   hero4 hero4  hero4 hero4 hero4  "
+         "hero4   hero4 hero4  hero4 hero4 hero4  "
+      "big2    big2   big2   big2   big2  big2"
+      ;
+    }
+  }
+  @media screen and (min-width: 750px) {
+    .grid {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 25vh);
+      grid-template-areas:
+      "big1     big1   big1  big1   big1  big1"
+      "hero1   hero1  hero1 hero2  hero2 hero2  "
+      "hero1   hero1  hero1 hero2  hero2 hero2  "
+      "hero3   hero3  hero3 hero4  hero4 hero4 "
+      "hero3   hero3  hero3 hero4  hero4 hero4 "
+      "big2    big2   big2  big2   big2  big2"
+      ;
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    .grid {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: auto;
+      grid-template-areas:
+     "big1     big1   big1  big1   big1  big1"
+      "hero1   hero1  hero1 hero2  hero2 hero2  "
+      "hero1   hero1  hero1 hero2  hero2 hero2  "
+      "hero3   hero3  hero3 hero4  hero4 hero4 "
+      "hero3   hero3  hero3 hero4  hero4 hero4 "
+      "big2    big2   big2  big2   big2  big2"
+      ;
+    }
+  }
+
+  .grid .item:nth-child(1)  { grid-area: big1; }
+  .grid .item:nth-child(2)  { grid-area: hero1; }
+  .grid .item:nth-child(3)  { grid-area: hero2; }
+  .grid .item:nth-child(4)  { grid-area: hero3; }
+  .grid .item:nth-child(5)  { grid-area: hero4; }
+  .grid .item:nth-child(6)  { grid-area: big2; }
+ 
+
+}
+

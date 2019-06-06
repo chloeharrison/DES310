@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		<title>Finding an 'Extinct' New Zealand Bird</title>
+
+		<meta charset="utf-8" />
+		<meta name="description" content="Finding an 'Extinct' New Zealand Bird" />
+
+		<link rel="stylesheet" media="all" href="css/main.css" />
+
+		
+		<script type="text/javascript" src="jquery.js"> </script>
+        
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+
+   
+		
+		
+	</head>
+
+	<body>
+	
+<article class="wrapper">
+  <header class="sec02">
+    <h1 class="pageTitle">Table</h1>
+    
+  </header>
+  <section>
+    
+      
+      <table class="pure-table pure-table-horizontal">
+        <thead>
+          <tr>
+              <th>Island</th>
+              <th>Size (ha)</th>
+              <th>Habitat</th>
+              <th>Number of Takahe Pairs</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Kapiti</td>
+            <td>2023</td>
+<td>Mostly Forest</td>
+ <td> <10  </td>
+            
+           
+           
+          </tr>
+          <tr>
+            
+           <td>Mana</td>
+ <td>217</td>
+  <td>Mostly Grassland</td>
+  <td> >10</td>
+            
+         
+          </tr>
+          <tr>
+             <td>Maud</td>
+
+<td>309</td>
+<td>Mixed Forest/Grass</td>
+<td>7-10</td>
+          
+            
+        
+          </tr>
+            
+            <tr>
+            <td>Tiritiri</td>
+   <td>210</td>
+    <td>Mixed Forest/Grass</td>
+  <td>10</td>
+          
+            
+          
+          </tr>
+        </tbody>
+      </table>
+
+
+  </section>
+</article>
+
+
+	</body>
+  <!--Sticky Header-->
+  <script>
+$(window).scroll(function() {
+
+    if ($(window).scrollTop() > 100) {
+        $('.main_h').addClass('sticky');
+    } else {
+        $('.main_h').removeClass('sticky');
+    }
+});
+ </script>
+ 
+
+<!-- Mobile Navigation-->
+ <script>
+$('.mobile-toggle').click(function() {
+    if ($('.main_h').hasClass('open-nav')) {
+        $('.main_h').removeClass('open-nav');
+    } else {
+        $('.main_h').addClass('open-nav');
+    }
+});
+
+$('.main_h li a').click(function() {
+    if ($('.main_h').hasClass('open-nav')) {
+        $('.navigation').removeClass('open-nav');
+        $('.main_h').removeClass('open-nav');
+    }
+});
+</script>
+<!-- navigation scroll -->
+ <script>
+$('nav a').click(function(event) {
+    var id = $(this).attr("href");
+    var offset = 70;
+    var target = $(id).offset().top - offset;
+    $('html, body').animate({
+        scrollTop: target
+    }, 500);
+    event.preventDefault();
+});
+</script>
+</html>
